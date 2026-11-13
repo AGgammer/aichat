@@ -1,5 +1,5 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 
 st.set_page_config(page_title="Our chatbot", layout="centered")
 st.title("Our chatbot")
@@ -7,7 +7,7 @@ st.title("Our chatbot")
 # 1. Διόρθωση στο API Key (χρήση st.secrets)
 api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # 2. Αρχικοποίηση του session state 
 if "messages" not in st.session_state:
