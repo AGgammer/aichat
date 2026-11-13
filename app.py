@@ -9,7 +9,7 @@ api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
 
 # Διόρθωση: Ενημέρωση στο συνιστώμενο μοντέλο
-model = genai.GenerativeModel('gemini-3.8-flash')
+model = genai.GenerativeModel('gemini-3.5-flash')
 
 # 2. Αρχικοποίηση του session state 
 if "messages" not in st.session_state:
