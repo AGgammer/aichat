@@ -8,8 +8,8 @@ st.title("Our chatbot")
 api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=api_key)
 
-# Διόρθωση: Χρήση του ενεργού μοντέλου αντί για το παλιό gemini-1.5-flash
-model = genai.GenerativeModel('gemini-2.5-flash')
+# Διόρθωση: Ενημέρωση στο συνιστώμενο μοντέλο
+model = genai.GenerativeModel('gemini-3.8-flash')
 
 # 2. Αρχικοποίηση του session state 
 if "messages" not in st.session_state:
